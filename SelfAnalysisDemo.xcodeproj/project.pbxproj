@@ -16,6 +16,7 @@
 		13D7420A2555F55A00411462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D742082555F55A00411462 /* LaunchScreen.storyboard */; };
 		13D742152555F55A00411462 /* SelfAnalysisDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D742142555F55A00411462 /* SelfAnalysisDemoTests.swift */; };
 		13D742202555F55A00411462 /* SelfAnalysisDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D7421F2555F55A00411462 /* SelfAnalysisDemoUITests.swift */; };
+		13D7423F25560BEA00411462 /* GeneralIncidentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D7423E25560BEA00411462 /* GeneralIncidentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		13D7421B2555F55A00411462 /* SelfAnalysisDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfAnalysisDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D7421F2555F55A00411462 /* SelfAnalysisDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAnalysisDemoUITests.swift; sourceTree = "<group>"; };
 		13D742212555F55A00411462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13D7423E25560BEA00411462 /* GeneralIncidentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralIncidentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +103,12 @@
 		13D741F92555F55700411462 /* SelfAnalysisDemo */ = {
 			isa = PBXGroup;
 			children = (
+				13D742372556079E00411462 /* Controller */,
+				13D742362556079000411462 /* Model */,
+				13D742352556077C00411462 /* Storyboards */,
 				13D741FA2555F55700411462 /* AppDelegate.swift */,
 				13D741FC2555F55700411462 /* SceneDelegate.swift */,
 				13D741FE2555F55700411462 /* ViewController.swift */,
-				13D742002555F55700411462 /* Main.storyboard */,
 				13D742062555F55A00411462 /* Assets.xcassets */,
 				13D742082555F55A00411462 /* LaunchScreen.storyboard */,
 				13D7420B2555F55A00411462 /* Info.plist */,
@@ -129,6 +133,29 @@
 				13D742212555F55A00411462 /* Info.plist */,
 			);
 			path = SelfAnalysisDemoUITests;
+			sourceTree = "<group>";
+		};
+		13D742352556077C00411462 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				13D742002555F55700411462 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		13D742362556079000411462 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13D742372556079E00411462 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13D7423E25560BEA00411462 /* GeneralIncidentsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13D742052555F55700411462 /* SelfAnalysisDemo.xcdatamodeld in Sources */,
+				13D7423F25560BEA00411462 /* GeneralIncidentsViewController.swift in Sources */,
 				13D741FF2555F55700411462 /* ViewController.swift in Sources */,
 				13D741FB2555F55700411462 /* AppDelegate.swift in Sources */,
 				13D741FD2555F55700411462 /* SceneDelegate.swift in Sources */,

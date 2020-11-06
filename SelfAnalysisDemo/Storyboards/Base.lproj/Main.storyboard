@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TableOfContents-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SelfAnalysisDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TableOfContents" id="BYZ-38-t0r" customClass="ViewController" customModule="SelfAnalysisDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-8i-plN">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
                                         <state key="normal" title="General Incidents"/>
+                                        <connections>
+                                            <segue destination="0lR-Zj-vHi" kind="show" id="IAr-rc-4cj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz8-s0-Sio">
                                         <rect key="frame" x="0.0" y="28.5" width="114" height="20"/>
@@ -102,10 +105,96 @@
             </objects>
             <point key="canvasLocation" x="-457" y="60"/>
         </scene>
+        <!--GeneralIncidentsViewController-->
+        <scene sceneID="8uz-nT-dFI">
+            <objects>
+                <viewController title="GeneralIncidentsViewController" id="0lR-Zj-vHi" customClass="GeneralIncidentsViewController" customModule="SelfAnalysisDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIA-DR-uos">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You were happy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBC-sh-66o">
+                                <rect key="frame" x="29.5" y="36" width="314" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="8m4-26-NKy"/>
+                                    <constraint firstAttribute="width" constant="314" id="YuF-Oj-mJc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perceptic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-zm-Hyq" userLabel="Perceptic Lbl">
+                                <rect key="frame" x="29.5" y="267" width="314" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="Jg9-OD-7dz"/>
+                                    <constraint firstAttribute="width" constant="314" id="PKX-bd-rg4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-q2-B39">
+                                <rect key="frame" x="86.960122699386375" y="418" width="200.00000000000009" height="65.999999999999943"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="CRg-IV-DjV"/>
+                                    <constraint firstAttribute="width" constant="200" id="JjE-6u-YB8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next Instruction">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextInstructionBtn:" destination="0lR-Zj-vHi" eventType="touchUpInside" id="Tm4-gm-LXm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHf-id-3cC">
+                                <rect key="frame" x="86.960122699386375" y="503" width="200.00000000000009" height="66.000000000000085"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back to TOC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backTOCBtn:" destination="0lR-Zj-vHi" eventType="touchUpInside" id="Rdj-iM-goA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hQE-HW-Nam"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hQE-HW-Nam" firstAttribute="bottom" secondItem="IHf-id-3cC" secondAttribute="bottom" constant="78" id="0yh-BT-SEu"/>
+                            <constraint firstItem="x0z-zm-Hyq" firstAttribute="centerX" secondItem="JOE-q2-B39" secondAttribute="centerX" id="44u-hF-Izb"/>
+                            <constraint firstItem="x0z-zm-Hyq" firstAttribute="centerY" secondItem="bIA-DR-uos" secondAttribute="centerY" id="749-ER-jYg"/>
+                            <constraint firstItem="IHf-id-3cC" firstAttribute="trailing" secondItem="JOE-q2-B39" secondAttribute="trailing" id="Jha-0u-aSJ"/>
+                            <constraint firstItem="IHf-id-3cC" firstAttribute="leading" secondItem="JOE-q2-B39" secondAttribute="leading" id="VYh-yp-4jQ"/>
+                            <constraint firstItem="SBC-sh-66o" firstAttribute="top" secondItem="hQE-HW-Nam" secondAttribute="top" constant="36.000000000000114" id="ZPA-qI-yGw"/>
+                            <constraint firstItem="SBC-sh-66o" firstAttribute="leading" secondItem="hQE-HW-Nam" secondAttribute="leading" constant="29.260736196318931" id="jbq-hp-eZj"/>
+                            <constraint firstItem="JOE-q2-B39" firstAttribute="top" secondItem="x0z-zm-Hyq" secondAttribute="bottom" constant="98" id="liM-K2-FWb"/>
+                            <constraint firstItem="SBC-sh-66o" firstAttribute="leading" secondItem="x0z-zm-Hyq" secondAttribute="leading" id="rFa-QA-HP3"/>
+                            <constraint firstItem="IHf-id-3cC" firstAttribute="top" secondItem="JOE-q2-B39" secondAttribute="bottom" constant="19" id="xND-cL-EKv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pRJ-cr-mik"/>
+                    <connections>
+                        <outlet property="instructionLbl" destination="SBC-sh-66o" id="tZq-xi-gQC"/>
+                        <outlet property="percepticLbl" destination="x0z-zm-Hyq" id="rO0-CG-A2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HpX-5E-nl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.59999999999999" y="59.820089955022496"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
